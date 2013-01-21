@@ -1,0 +1,10 @@
+create keyspace mykeyspace;
+use mykeyspace;
+
+CREATE COLUMN FAMILY User
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata = [
+{column_name: username, validation_class: UTF8Type}
+{column_name: password, validation_class: UTF8Type}
+];

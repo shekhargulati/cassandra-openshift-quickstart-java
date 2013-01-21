@@ -12,3 +12,6 @@
 # prevent your application from stopping cleanly or starting at all.
 # Application start and stop is subject to different timeouts
 # throughout the system.
+set -x
+kill $(ps aux | grep 'cassandra' | awk '{print $2}')
+exit 0
